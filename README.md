@@ -6,17 +6,16 @@
 In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups.
 
 
-<h2>Important note:</h2>
+<h1>Important note:</h1>
 This lab assumes you have already completed the previous lab/tutorial as it is the continuation of the last lab, if you have not already completed that one, go ahead and complete it and come back to this once you finish it. The link is listed below.
 
-- [How to Setup VMs and a Virtual Network in Azure](https://github.com/jacksonmalms/create-azure-vm)
-<br />
-<h3>Environments and Technologies Used</h3>
+- [How to Setup VMs and a Virtual Network in Azure](https://github.com/jacksonmalms/create-azure-vm)<br />
+<h1>Environments and Technologies Used</h1>
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Various Command-Line Tools
-- Various Network Protocols (SSH, RDH, DNS, HTTP/S, ICMP)
+- Various Network Protocols (SSH, RDP, DNS, ICMP)
 - Wireshark (Protocol Analyzer)
 
 <h2>Operating Systems Used </h2>
