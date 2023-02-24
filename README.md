@@ -24,12 +24,15 @@ This lab assumes you have already completed the previous lab/tutorial as it is t
 - Windows 10 (21H2)
 - Ubuntu Server 20.04
 
-<h2>High-Level Steps</h2>
+<h2>Overview</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Step 1: Use Remote Desktop to connect to your Windows 10 Virtual Machine
+- Step 2: Within your Windows 10 Virtual Machine, Install Wireshark
+- Step 3: Ping the Ubuntu VM to observe ICMP traffic, disable and re-enable ICMP traffic through the NSG
+- Step 4: Observe SSH traffic by connecting through the command line on the Windows VM
+- Step 5: Observe DNS traffic on the Windows VM
+- Step 6: Observe RDP traffic on the Windows VM
+- Step 7: Clean up by deleting the resource groups to ensure we don't incur any charges or waste credits
 
 <h2>Actions and Observations</h2>
 
