@@ -150,73 +150,59 @@ Now try and to ping the Ubuntu VM again using the ping command. We now should se
 <br />
 
 <p>
-<img src="https://i.imgur.com/m2pstmT.png"/>
+<img src="https://i.imgur.com/vlptP2x.png"/>
 </p>
 <p>
-Now try and to ping the Ubuntu VM again using the ping command. We now should see that the Ubuntu VM is now sending replies again!
+Now that we have observed ICMP traffic, we will now connect to our Ubuntu VM via SSH (secure shell) within the command line inside of the Windows VM.
+  
+As the image above shows, in the command line type "SSH (whatever the private IP of your Ubuntu VM is)". 
+  
+When prompted the following
+
+"The authenticity of host '10.0.0.5 (10.0.0.5)' can't be established.
+ECDSA key fingerprint is SHA256:73iEIznECaIszgz83pKTfng9jk2d16JT2ZozJtn3a68.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?"
+
+Type "yes"
+  
+After connecting it will then prompt you for the password of the Ubuntu VM (we set this when we made it), type the password (note: the password won't be visable as you type it in, it may look like you aren't typing it in but you are).
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/m2pstmT.png"/>
+<img src="https://i.imgur.com/oEBPtxB.png"/>
 </p>
 <p>
-Now try and to ping the Ubuntu VM again using the ping command. We now should see that the Ubuntu VM is now sending replies again!
+Now in Wireshark filter for ssh traffic and refresh, again continue without saving.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/m2pstmT.png"/>
+<img src="https://i.imgur.com/xebnIjE.png"/>
 </p>
 <p>
-Now try and to ping the Ubuntu VM again using the ping command. We now should see that the Ubuntu VM is now sending replies again!
+In the remote SSH connection within the command line type some linux shell commands like man, ls, pwd, etc and obvserve the SSH traffic.
+  
+Type "exit" to terminate the SSH connection.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/m2pstmT.png"/>
+<img src="https://i.imgur.com/WOVeWYF.png"/>
 </p>
 <p>
-Now try and to ping the Ubuntu VM again using the ping command. We now should see that the Ubuntu VM is now sending replies again!
+Now lets observe DHCP traffic.
+  
+In wireshark filter by dchp and refresh. In the command line type "ipconfig /renew" to issue a new IP adress to the Windows VM, this will use the DHCP protocol and the traffic will be observable in wireshark.
+  
+Now I think we get the gist of it now. On your own you can try to observe DNS traffic by typing in the command line "nslookup google.com", or filter for RDP traffic in wireshark by typing the in the filter "tcp.port == 3389" and see the constant RDP traffic as we are currently inside of a remote desktop connection.
+  
+Well congrats, you have made it to the end of this lab! Now in the very last step lets clean up our Azure resources so we don't incur any costs.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/m2pstmT.png"/>
+<img src="https://i.imgur.com/ZttsXKR.png"/>
 </p>
 <p>
-Now try and to ping the Ubuntu VM again using the ping command. We now should see that the Ubuntu VM is now sending replies again!
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/m2pstmT.png"/>
-</p>
-<p>
-Now try and to ping the Ubuntu VM again using the ping command. We now should see that the Ubuntu VM is now sending replies again!
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/m2pstmT.png"/>
-</p>
-<p>
-Now try and to ping the Ubuntu VM again using the ping command. We now should see that the Ubuntu VM is now sending replies again!
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/m2pstmT.png"/>
-</p>
-<p>
-Now try and to ping the Ubuntu VM again using the ping command. We now should see that the Ubuntu VM is now sending replies again!
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/m2pstmT.png"/>
-</p>
-<p>
-Now try and to ping the Ubuntu VM again using the ping command. We now should see that the Ubuntu VM is now sending replies again!
-</p>
-<br />
+To delete the resource group, just go back to the resource groups page, click on the resource group, click delete resource group, and type/copy paste the resource group's name to confirm, and then click delete.
