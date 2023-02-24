@@ -15,7 +15,7 @@ This lab assumes you have already completed the previous lab/tutorial as it is t
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Various Command-Line Tools
-- Various Network Protocols (SSH, RDP, DNS, ICMP)
+- Various Network Protocols (SSH, RDP, DNS, ICMP, DHCP)
 - Wireshark (Protocol Analyzer)
 
 <h2>Operating Systems Used </h2>
