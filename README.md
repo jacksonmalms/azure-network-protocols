@@ -197,7 +197,7 @@ In wireshark filter by dchp and refresh. In the command line type "ipconfig /ren
   
 Now I think we get the gist of it now. On your own you can try to observe DNS traffic by typing in the command line "nslookup google.com", or filter for RDP traffic in wireshark by typing the in the filter "tcp.port == 3389" and see the constant RDP traffic as we are currently inside of a remote desktop connection.
   
-Well congrats, you have made it to the end of this lab! Now in the very last step lets clean up our Azure resources so we don't incur any costs.
+Well congrats, you have made it to the end of this lab! Now for the very last step lets clean up our Azure resources so we don't incur any costs.
 </p>
 <br />
 
