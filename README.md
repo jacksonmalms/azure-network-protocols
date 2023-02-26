@@ -89,7 +89,7 @@ Find your Ubuntu VM's private IP and copy it.
 <img src="https://i.imgur.com/Ajzoggh.png"/>
 </p>
 <p>
-Now go back to the VM open the command line and ping -t the private IP address of the Ubuntu VM to make continuous ICMP traffic that will be captured by Wireshark. We should see requests from the the Ubuntu VM's private IP, and replies from our Windows private IP as well.
+Now go back to the VM open the command line and ping -t the private IP address of the Ubuntu VM to make continuous ICMP traffic that will be captured by Wireshark. We should see requests from the Ubuntu VM's private IP, and replies from our Windows private IP as well.
 </p>
 <br />
 
@@ -145,7 +145,7 @@ Now lets delete the NSG rule we made on the ubuntu VM
 <img src="https://i.imgur.com/m2pstmT.png"/>
 </p>
 <p>
-Now try and to ping the Ubuntu VM again using the ping command. We now should see that the Ubuntu VM is now sending replies again!
+Now try to ping the Ubuntu VM again using the ping command. We now should see that the Ubuntu VM is now sending replies again!
 </p>
 <br />
 
@@ -165,7 +165,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?"
 
 Type "yes"
   
-After connecting it will then prompt you for the password of the Ubuntu VM (we set this when we made it), type the password (note: the password won't be visable as you type it in, it may look like you aren't typing it in but you are).
+After connecting it will then prompt you for the password of the Ubuntu VM (we set this when we made it), type the password (note: the password won't be visible as you type it in, it may look like you aren't typing it in but you are).
 </p>
 <br />
 
@@ -181,7 +181,7 @@ Now in Wireshark filter for ssh traffic and refresh, again continue without savi
 <img src="https://i.imgur.com/xebnIjE.png"/>
 </p>
 <p>
-In the remote SSH connection within the command line type some linux shell commands like man, ls, pwd, etc and obvserve the SSH traffic.
+In the remote SSH connection within the command line type some linux shell commands like man, ls, pwd, etc and observe the SSH traffic.
   
 Type "exit" to terminate the SSH connection.
 </p>
@@ -191,9 +191,9 @@ Type "exit" to terminate the SSH connection.
 <img src="https://i.imgur.com/WOVeWYF.png"/>
 </p>
 <p>
-Now lets observe DHCP traffic.
+Now let's observe DHCP traffic.
   
-In wireshark filter by dchp and refresh. In the command line type "ipconfig /renew" to issue a new IP adress to the Windows VM, this will use the DHCP protocol and the traffic will be observable in wireshark.
+In wireshark filter by dchp and refresh. In the command line type "ipconfig /renew" to issue a new IP address to the Windows VM, this will use the DHCP protocol and the traffic will be observable in wireshark.
   
 Now I think we get the gist of it now. On your own you can try to observe DNS traffic by typing in the command line "nslookup google.com", or filter for RDP traffic in wireshark by typing the in the filter "tcp.port == 3389" and see the constant RDP traffic as we are currently inside of a remote desktop connection.
   
